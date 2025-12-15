@@ -1,0 +1,368 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Montserrat";
+}
+
+body{
+    background-color: black;
+    color: white;
+    overflow: hidden;
+}
+
+.main{
+    display: flex;
+    height: calc(100vh - 80px);
+    padding:0.5rem ;
+   
+}
+.sidebar{
+    background-color: rgba(18, 18, 18, 0.0162);
+    width: 350px;
+    border-radius: 1rem;  
+    margin-right:0.5rem;
+}
+
+.maincontent{
+    background-color:#121212;    
+    flex:1;
+    border-radius:  1rem 1rem 1rem 1rem;
+    overflow: auto; 
+    padding: 0 1rem 0 1rem;
+    /* border-bottom-left-radius: 1rem; */
+}
+
+.musicplayer{
+    /* background-color: blue; */
+    width: 100%;
+    bottom:0px;
+    position: fixed;
+    height:72px;
+    z-index: 10;
+     background-color: black;
+         /* overflow-x: hidden; */
+
+    
+}
+
+.sidebar .nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color:#121212;
+    border-radius: 1rem;
+    height: 100px;
+    padding: 0.5rem 0.75rem;
+}
+.nav-options{
+    line-height: 2.5rem;
+    opacity: 0.7;
+    padding: 0.5rem 0.75rem;
+}
+.nav-options:hover{
+    opacity: 1.0;   
+}
+
+.nav-options i{
+    font-size: 1.25rem;
+    padding: 10px 10px 10px 10px;
+}
+
+.nav-options a{
+    font-size: 1.25rem;
+}
+a{
+    color: white;
+    text-decoration: none; 
+    font-size: 1.25rem;
+
+}
+.library{
+    background-color:#121212;
+    border-radius: 1rem;
+    margin-top: 10px; 
+    padding: 0.5rem 0.75rem;
+    height: 100%; 
+    padding: 0.5rem 0.75rem;
+}
+
+.options{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.lib-options img{
+    height:1.25rem;
+    width: 1.2rem;  
+    padding: 10px 10px 0px 10px;
+
+}
+.icons{
+    font-size: 1.25rem;
+    display: flex;
+}
+
+.icons i{
+    opacity: 0.7;
+    margin-right: 0.5rem;
+    padding: 5px;
+}
+
+.icons i:hover{
+    opacity: 1;
+}
+
+.box{
+    height:8rem;
+    background-color: #232323;
+    border-radius: 1rem;
+    margin: 0.5rem 0 0.5rem 0;
+    padding: 0.75rem 1.75rem;
+    /* text-align: center; */
+}
+
+.box1{
+    font-size: 1rem;
+    font-weight: 500;
+    padding-top: 0.8rem;
+    padding-bottom: 1rem;
+}
+.box2{
+    font-size: 0.75rem;
+    opacity: 0.9;
+    padding-bottom: 0.8rem;
+}
+
+.badge{
+    background-color: white;
+    color:black;
+    border: none;
+    border-radius: 100px;
+    padding: 0.25rem 1rem;
+    font-weight: 700;
+    height: 2rem;
+    width:fit-content;
+    margin-top: 0.5rem;
+}
+
+.dark-badge{
+    background-color: black;
+    color:white;
+}
+
+.sticky-nav{
+    position: sticky;
+    top:0;
+    opacity: 0.9;
+    background-color: #232323;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    padding: 1rem 0 1rem 0;
+    border-radius: 1rem;
+    z-index: 2;
+    
+}
+
+.sticky-nav img{
+    margin-left:0.75rem;
+
+}
+.sticky-nav-options{
+    margin-right:0.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sticky-nav-options button{
+    margin-right: 1rem;
+}
+
+@media(max-width:1000px){
+    .forwardbtn{
+        display: none;
+    }
+    .explorebtn{
+        display: none;
+    }
+}
+
+.card{
+    background-color: #232323;
+    width:150px;
+    border-radius:0.5rem;    
+    padding:1rem;
+    margin: 0.8rem 0 1.5rem 1.5rem;
+
+}
+.card-img{
+    width:100%;
+    border-radius:0.5rem;    
+
+
+}
+.cards-container{
+    display: flex;
+    flex-wrap:wrap;
+    /* justify-content: space-between; */
+}
+.card-title{
+    font-weight: 600;
+}
+.card-info{
+    font-size:0.75rem;
+    opacity:0.8;
+}
+
+.footer{
+    height:300px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+}
+.line{
+    width: 90%;
+    height:50%;
+    border-top: 1px solid white ;
+    opacity: 0.4;
+    bottom: 75px;
+    /* position: fixed; */
+}
+.musicplayer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+   background-attachment:fixed;
+}
+
+.album{
+    width: 25%;    
+}
+
+.player{
+    /* background-color: yellowgreen; */
+    width:50%;
+
+   
+}
+.playercontrols{
+  display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.controls{  
+    width: 25%;
+    height:72px;
+    position: sticky;
+
+}
+
+.player-control-icon{
+    height:1rem;
+    margin-right: 1.75rem;
+    opacity: 0.7;
+}
+
+.player-control-icon:hover{
+    opacity: 1;
+}
+.playback-bar{
+    display:flex;
+    align-items:center;
+    justify-content: center;
+}
+.progress-bar{
+    width: 70%;
+    appearance: none;
+    background-color: transparent;
+    cursor:pointer;
+}
+.progress-bar::-webkit-slider-runnable-track{
+    background-color: #ddd;
+    border-radius: 100px;
+    height: 0.2rem  ;
+}
+.progress-bar::-webkit-slider-thumb{
+    appearance: none;
+    height:1em;
+    width:1rem;
+    background-color: #1bd760;
+    border-radius: 50%;
+    margin-top:-6px;
+}
+
+.album{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    align-items: center;
+    
+}
+.album img{
+    height: 3rem;
+    margin-left: 1rem;
+    /* padding: 0.7rem; */
+}
+.albumpart1{
+    display: flex;
+    align-items: center;
+}
+.albumdesc{
+    margin-left:0.75rem;
+    font-size: 1rem;
+}
+/* .albumpart1:hover{
+   transform: scale(1);
+} */
+.albumicons i{
+    opacity: 0.7;
+    margin-right: 0.5rem;
+    padding: 5px;
+    height: 16px;
+}
+
+.albumicons i:hover{
+    opacity: 1;
+}
+
+.controls{
+  display: flex;
+  align-items: center;
+
+
+}
+.controls i{
+    opacity: 0.7;
+    margin-right: 0.5rem;
+    font-size: 1.25rem;
+    color: white;
+    height:16px;
+}
+.controls i:hover{
+    opacity: 1.0;
+}
+
+.volume{
+    width: 20%;
+    appearance: none;
+    background-color: transparent;
+    cursor:pointer;
+}
+.volume::-webkit-slider-runnable-track{
+    background-color: #ddd;
+    border-radius: 100px;
+    height: 0.2rem  ;
+    margin-top: -6px;
+}
+.volume::-webkit-slider-thumb{
+    appearance: none;
+    height:0.6em;
+    width:0.6rem;
+    background-color: #1bd760;
+    border-radius: 50%;
+    margin-top:-2.75px;
+}
